@@ -1,0 +1,8 @@
+name: "kill"
+version: "0.1.0"
+usage: "delete the specified chart from chart repo"
+description: "delete the specified chart from chart repo"
+ignoreFlags: false
+command: "$HELM_PLUGIN_DIR/bin/delete_chart"
+hooks:
+  install: "cd $HELM_PLUGIN_DIR; scripts/install_plugin.sh"
