@@ -13,7 +13,7 @@ This plugin makes deleting easier by keeping the delete/kill command in the helm
 To install, just run:
 
 ```
-helm plugin install 
+helm plugin install https://github.com/rollerd/helm-kill-plugin.git
 ```
 
 ### Usage
