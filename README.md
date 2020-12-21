@@ -4,7 +4,7 @@
 
 Simple helm plugin for deleting specified chart versions from an http chart repo where curl would otherwise be used.
 
-This plugin makes deleting easier by keeping the delete/kill command in the helm tool.
+This plugin makes deleting easier by keeping the delete/kill command in the helm tool (for the repos I use anyway)
 
 (why not 'helm delete'? Even though 'delete' does not appear in the helm help list, it is set as an alias for uninstall)
 
@@ -18,7 +18,7 @@ helm plugin install
 
 ### Usage
 
-You must have the variable `USER=<your username>` set in your environment (this is set by default on most systems) for basic auth
+You must have the variables `USER=<your username>` and `HELM_HTTP_URL` set in your environment (USER is set by default on most systems)
 
 To delete a specific chart version:
 
@@ -31,8 +31,3 @@ You can see this same command from helm:
 ```
 helm kill --help
 ```
-
-#### TODO
-
-Right now, the repo URL is hard-coded into the go binary. This could easily be updated to use an environment variable or to read from the helm config file
-
